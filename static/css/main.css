@@ -883,11 +883,11 @@ button {
     #header > :first-child:before {
       display: none; }
   #header .logo {
-    width: 5.5rem;
-    height: 5.5rem;
-    line-height: 5.5rem;
-    border: solid 1px #ffffff;
-    border-radius: 100%; }
+    width: 10.5rem;
+    height: 10.5rem;
+    line-height: 10.5rem;
+    border: solid 1px;
+    border-radius: 0%; }
     #header .logo .icon:before {
       font-size: 2rem; }
   #header .content {

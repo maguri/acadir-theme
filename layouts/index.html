@@ -7,10 +7,10 @@
           <header id="header">
             <div class="logo">
               {{ with .Site.Params.logoimage }}
-              <img src="{{ . }}" width="100%" style="padding: 10px 10px 10px 10px;">
+              <img src="{{ . }}" width="100%">
             {{ end }}
-            {{ with .Site.Params.logo }}            
-              <span class="icon {{ . }}"></span>
+            {{ with .Site.Params.logo }}
+              <!--span class="icon {{ . }}"></span-->
             {{ end }}
             </div>
             <div class="content">
@@ -26,6 +26,17 @@
                 {{ end }}
               </ul>
             </nav>
+
+            <!-- socialLinks -->
+            <div class="content">
+              <div class="inner">
+                <ul class="icons">
+                {{ range .Site.Params.social }}
+                	<li><a href="{{ .link | safeURL }}" class="icon fa-{{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+                {{ end }}
+                </ul>
+              </div>
+            </div>
           </header>
 
         <!-- Main -->
@@ -35,12 +46,12 @@
             {{ end }}
           </div>
 
-        <!-- Multilanguage -->
+        <!-- Multilanguage >
           <div id="languages">
             {{ if .IsTranslated }}
               {{ range $i, $e := .Translations }}
                 {{ if $i }}, {{ end }}<a href="{{ .Permalink }}">{{ $e.Language.LanguageName }}</a>
               {{ end}}
             {{ end }}
-          </div>
+          </div-->
 {{ partial "footer.html" . }}

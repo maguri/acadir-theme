@@ -23,6 +23,7 @@
       $header = $('#header'),
       $footer = $('#footer'),
       $languages = $('#languages'),
+      $socialLinks = $('#socialLinks'),
       $main = $('#main'),
       $main_articles = $main.children('article');
 
@@ -103,6 +104,7 @@
                   $header.hide();
                   $footer.hide();
                   $languages.hide();
+                  $socialLinks.hide();
 
                 // Show main, article.
                   $main.show();
@@ -178,6 +180,7 @@
                     $header.hide();
                     $footer.hide();
                     $languages.hide();
+                    $socialLinks.hide();
 
                   // Show main, article.
                     $main.show();
@@ -238,6 +241,7 @@
                   $footer.show();
                   $header.show();
                   $languages.show();
+                  $socialLinks.show();
 
                 // Unmark as visible.
                   $body.removeClass('is-article-visible');
@@ -274,6 +278,7 @@
                 $footer.show();
                 $header.show();
                 $languages.show();
+                $socialLinks.hide();
 
               // Unmark as visible.
                 setTimeout(function() {

@@ -9,11 +9,11 @@
 		<title>{{ .Title }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/css/main.css" />
-		<link rel="stylesheet" href="/css/project.css" />
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css" />
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/project.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+		<noscript><link rel="stylesheet" href="{{ .Site.BaseURL }}/css/noscript.css" /></noscript>
 	</head>
 	<!-- Scripts -->
-			<script src="/js/jquery.min.js"></script>
+			<script src="{{ .Site.BaseURL }}/js/jquery.min.js"></script>
 	<body>

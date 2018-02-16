@@ -886,7 +886,7 @@ button {
     width: 10.5rem;
     height: 10.5rem;
     line-height: 10.5rem;
-    border: solid 1px;
+    border: solid 0px;
     border-radius: 0%; }
     #header .logo .icon:before {
       font-size: 2rem; }

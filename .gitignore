@@ -1,2 +1,4 @@
 static/.sass-cache
 static/css/main.css.map
+exampleSite/public/*
+.DS_Store

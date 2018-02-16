@@ -11,6 +11,7 @@ disableKinds=["RSS"]
                 <!--[-->for free under the <a href="https://html5up.net/license">Creative Commons</a> license.<!--]-->'
   logo = "fa-diamond"
   copyright = "Untitled"
+  icon = "/images/favicon.ico"
 
 [[params.social]]
   medium = "twitter"

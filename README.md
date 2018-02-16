@@ -39,6 +39,8 @@ To use an image as logo, remove the `logo = "fa-diamond"` line and replace it wi
 
 Create an `images` folder in the static folder of your site -- **not** the theme's static folder. Add pictures to `/static/images` as needed. If you want to change the background image, the replacement image should be named `bg.jpg`.
 
+You can also change the favicon of your website setting the `icon` inside params. To use an icon as favicon, set a new variable `icon = "/images/favicon.ico"` and place your image at that location in the `static` folder. The image should be a `.ico` in square format.
+
 ### Writing your pages
 
 To create a new page, run the following command inside your Hugo sites:
@@ -48,7 +50,7 @@ To create a new page, run the following command inside your Hugo sites:
 Change `your-page` to what you want to name the file. There are three variables that you can change: `title`, `weight`, and `draft`. Weight is set to 0 by default, so be sure to change it.
 
 As default, the title of the page will be taken as menu item. In case you have longer page titles, the menu may get distorted and you can set an additional parameter in the pages front matter to have a shorter menu name.
-Just set `menuname = "<Your Short Name>"` in that page and it will use this optional parameter. 
+Just set `menuname = "<Your Short Name>"` in that page and it will use this optional parameter.
 
 You can also copy the pages from the exampleSite folder and modify those pages.
 
@@ -62,10 +64,10 @@ You may want a tab to link to external content. Create your page, and set a vari
 
 ## Multilingual Support
 
-For the `config.toml`, follow the template at the bottom of `config.toml` in your exampleSite folder. German is used as the example language, but you can use any language you want. For content files, it is suggested to use the same base file name for each translate page. For example, for `about.md`, use `about.de.md` for the German page. 
+For the `config.toml`, follow the template at the bottom of `config.toml` in your exampleSite folder. German is used as the example language, but you can use any language you want. For content files, it is suggested to use the same base file name for each translate page. For example, for `about.md`, use `about.de.md` for the German page.
 
 ## Google Analytics
-To include Google Analytics, you can follow the standard Hugo way and just add `googleAnalytics = "UA-123-45"` to the `config.toml` as described on [Analytics in Hugo](https://gohugo.io/extras/analytics/). 
+To include Google Analytics, you can follow the standard Hugo way and just add `googleAnalytics = "UA-123-45"` to the `config.toml` as described on [Analytics in Hugo](https://gohugo.io/extras/analytics/).
 
 ## CSS Overrides
 If you need to override some CSS properties or add new ones which will be on top of the existing template CSS, you can create the file `static/css/project.css` and it will be loaded after the themes own CSS files.
@@ -74,7 +76,7 @@ Changing the background color for the content modals would need the following ad
 
     #main article {
 			background-color: rgba(89, 64, 50, 0.85);
-		} 
+		}
 
 ## License
 

@@ -1,0 +1,33 @@
+.column-timetable {
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+
+.column-instructor {
+  float: right;
+  width: 40%;
+  padding: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a.icon.fa-facebook:hover {
+  color: #3B5998;
+}
+
+a.icon.fa-twitter:hover {
+  color: #1dcaff;
+}
+
+a.icon.fa-instagram:hover {
+color: #fec66d;
+}
+
+a.icon.fa-google-plus:hover {
+  color: #d34836;
+}

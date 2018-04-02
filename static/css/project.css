@@ -1,7 +1,7 @@
 .column-timetable {
-    float: left;
-    width: 60%;
-    padding: 10px;
+  float: left;
+  width: 60%;
+  padding: 10px;
 }
 
 .column-instructor {
@@ -11,9 +11,9 @@
 }
 /* Clear floats after the columns */
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 a.icon.fa-facebook:hover {
@@ -25,9 +25,25 @@ a.icon.fa-twitter:hover {
 }
 
 a.icon.fa-instagram:hover {
-color: #fec66d;
+  color: #fec66d;
 }
 
 a.icon.fa-google-plus:hover {
   color: #d34836;
+}
+
+/* Style tab links */
+.tablink {
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 50%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tablink.active {
+  background: rgba(19, 21, 25, 0.85);
 }

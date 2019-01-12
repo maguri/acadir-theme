@@ -1,20 +1,9 @@
-
-		<!-- Footer -->
-			<footer id="footer">
-				<a class="copyright" href="{{ .Site.BaseURL }}#policie">Condicions de Privacitat</a>
-				<p></p>
-				<p class="copyright"><strong> {{ .Site.Params.copyright }} </strong>· &copy;<a target="_blank" href="{{ .Site.Params.cv }}">{{ .Site.Params.developer }}</a></p>
-			</footer>
-
-	</div>
-	<!-- BG -->
-	<div id="bg"></div>
-
-	<!-- Scripts -->
-	<script src="{{ .Site.BaseURL }}/js/skel.min.js"></script>
-	<script src="{{ .Site.BaseURL }}/js/util.js"></script>
-	<script src="{{ .Site.BaseURL }}/js/main.js"></script>
-	{{ template "_internal/google_analytics_async.html" . }}
-
-	</body>
-</html>
+<!-- Footer -->
+<footer id="footer">
+  <a class="copyright" href="{{ .Site.BaseURL }}#policie">Condicions de Privacitat</a>
+</footer>
+<!-- Scripts -->
+<script src="{{ .Site.BaseURL }}/js/skel.min.js"></script>
+<script src="{{ .Site.BaseURL }}/js/util.js"></script>
+<script src="{{ .Site.BaseURL }}/js/main.js"></script>
+{{ template "_internal/google_analytics_async.html" . }}

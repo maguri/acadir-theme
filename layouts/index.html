@@ -1,60 +1,60 @@
+<!DOCTYPE HTML>
+<!--
+  Dimension by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 {{ partial "header.html" . }}
+<!-- Wrapper -->
+<body>
+<div id="wrapper">
+  <header id="header"><!-- Header -->
+    <div class="logo">
+    {{ with .Site.Params.logoimage }}
+      <img src="{{ . }}" width="100%" alt="AIKIDO - Aikido Tarragona - logo ACADIR">
+    {{ end }}
+    </div>
+    <div class="content">
+      <div class="inner">
+        <h1>{{ .Site.Params.Title | safeHTML }}</h1>
+        <p>{{ .Site.Params.description | safeHTML }}</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        {{ range .Data.Pages.ByWeight }}
+          {{ if not (isset .Params "hiden") }}
+            <li><h1>
+              {{ if isset .Params "link" }}<a rel="canonical" href="{{ index .Params "link" }}"{{else}}<a href="#{{ .File.TranslationBaseName }}"{{end}}>{{ if .GetParam "menuname" }}{{ .GetParam "menuname" }}{{ else }}{{ .Title }}{{ end }}</a></h1></li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+    <!-- socialLinks -->
+    <div class="content">
+      <div class="inner">
+        <ul class="icons">
+        {{ range .Site.Params.social }}
+          <li>
+            <a href="{{ .link | safeURL }}" class="icon fa-{{ .icon }}" target="_blank" rel="dofollow"><span class="label">{{ .medium }}</span></a>
+          </li>
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+  </header>
 
-    <!-- Wrapper -->
-      <div id="wrapper">
+  <div id="main">
+    {{ range .Data.Pages }}
+      {{ .Render "onepagestyle" }}
+    {{ end }}
+  </div>
 
-        <!-- Header -->
-          <header id="header">
-            <div class="logo">
-              {{ with .Site.Params.logoimage }}
-              <img src="{{ . }}" width="100%">
-            {{ end }}
-            {{ with .Site.Params.logo }}
-              <!--span class="icon {{ . }}"></span-->
-            {{ end }}
-            </div>
-            <div class="content">
-              <div class="inner">
-                <h1>{{ .Site.Title | safeHTML }}</h1>
-                <p>{{ .Site.Params.description | safeHTML }}</p>
-              </div>
-            </div>
-            <nav>
-              <ul>
-                {{ range .Data.Pages.ByWeight }}
-                  {{ if not (isset .Params "hiden") }}
-                    <li>
-                      {{ if isset .Params "link" }}<a href="{{ index .Params "link" }}"{{else}}<a href="#{{ .File.TranslationBaseName }}"{{end}}>{{ if .GetParam "menuname" }}{{ .GetParam "menuname" }}{{ else }}{{ .Title }}{{ end }}</a></li>
-                  {{ end }}
-                {{ end }}
-              </ul>
-            </nav>
-
-            <!-- socialLinks -->
-            <div class="content">
-              <div class="inner">
-                <ul class="icons">
-                {{ range .Site.Params.social }}
-                	<li><a href="{{ .link | safeURL }}" class="icon fa-{{ .icon }}" target="_blank"><span class="label">{{ .medium }}</span></a></li>
-                {{ end }}
-                </ul>
-              </div>
-            </div>
-          </header>
-
-        <!-- Main -->
-          <div id="main">
-            {{ range .Data.Pages }}
-              {{ .Render "onepagestyle" }}
-            {{ end }}
-          </div>
-
-        <!-- Multilanguage >
-          <div id="languages">
-            {{ if .IsTranslated }}
-              {{ range $i, $e := .Translations }}
-                {{ if $i }}, {{ end }}<a href="{{ .Permalink }}">{{ $e.Language.LanguageName }}</a>
-              {{ end}}
-            {{ end }}
-          </div-->
 {{ partial "footer.html" . }}
+
+</div>
+<!-- BG -->
+<div id="bg"></div>
+</body>
+</html>

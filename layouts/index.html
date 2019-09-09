@@ -31,6 +31,19 @@
         {{ end }}
       </ul>
     </nav>
+    <div class="content photo">
+      <div class="inner photo">
+        <ul class="icons">
+        {{ range .Site.Params.media }}
+          <li>
+            <a href="{{ .link | safeURL }}" class="icon fa-{{ .icon }}" target="_blank" rel="dofollow">
+              <span class="label">{{ .medium }}</span>
+            </a>
+          </li>
+        {{ end }}
+        </ul>
+      </div>
+    </div>
     <!-- socialLinks -->
     <div class="content">
       <div class="inner">

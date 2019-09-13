@@ -28,8 +28,12 @@ a.icon.fa-instagram:hover {
   color: #fec66d;
 }
 
-a.icon.fa-google-plus:hover {
+a.icon.fa-youtube:hover {
   color: #d34836;
+}
+
+a.icon.fa-photo:hover {
+  color: #fec66d;
 }
 
 /* Style tab links */

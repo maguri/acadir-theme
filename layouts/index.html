@@ -37,7 +37,7 @@
         {{ range .Site.Params.media }}
           <li>
             <a href="{{ .link | safeURL }}" class="icon fa-{{ .icon }}" target="_blank" rel="dofollow">
-              <span class="label">{{ .medium }}</span>{{ .title }}
+              <span class="label"></span>
             </a>
           </li>
         {{ end }}

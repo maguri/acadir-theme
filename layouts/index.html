@@ -24,7 +24,7 @@
     <nav>
       <ul>
         {{ range .Data.Pages.ByWeight }}
-          {{ if not (isset .Params "hiden") }}
+          {{ if not (isset .Params "hidden") }}
             <li><h1>
               {{ if isset .Params "link" }}<a rel="canonical" href="{{ index .Params "link" }}"{{else}}<a href="#{{ .File.TranslationBaseName }}"{{end}}>{{ if .GetParam "menuname" }}{{ .GetParam "menuname" }}{{ else }}{{ .Title }}{{ end }}</a></h1></li>
           {{ end }}
